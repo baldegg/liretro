@@ -28,7 +28,7 @@ class Tournament(models.Model):
     third = models.ForeignKey(Player, on_delete=models.CASCADE, related_name='third+', verbose_name="Third Place Player/Team")
 
     def __str__(self):
-        return self.game_or_event_name
+        return self.game_name
 
 
 class Score(models.Model):
