@@ -5,7 +5,7 @@ class Achievement(models.Model):
     class Meta:
         verbose_name = "Achievement Station Game"
         ordering = ['event_time']
-    image = models.ImageField(upload_to='liretro/scoreboard/static/scoreboard/images/achgames')
+    image = models.ImageField(upload_to='scoreboard/static/scoreboard/images/achgames')
     game_or_event_name = models.CharField(max_length=200, unique=True)
     event_time = models.DateTimeField("Scheduled Date/Time", blank=True)
     def __str__(self):
