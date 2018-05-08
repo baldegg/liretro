@@ -1,0 +1,15 @@
+{% extends 'scoreboard/base.html' %}
+{% block body %}
+{% if game %}
+        <h1> {{ game }}</h1>
+        <ol>
+            {% for score in game.score_set.all %}
+                <li>{% if score.score %}{{ score.score }} {% else %}
+                    {{  score.time }}{% endif %} - {{ score.player.player_name }}</li>
+            {% endfor %}
+        </ol>
+{% else %}
+    <p>Game not found.</p>
+{% endif %}
+{%endblock%}
+

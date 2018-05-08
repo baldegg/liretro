@@ -1,0 +1,140 @@
+
+@font-face {
+
+    font-family: MarioKart;
+	src: local('Mario Kart DS'),
+    local('Mario-Kart-DS'),
+    url('Mario-Kart-DS.ttf')
+        format('truetype');
+
+}
+
+
+
+@font-face {
+
+    font-family: GameBoy;
+	src: local('Early GameBoy'),
+    local('Early-GameBoy'),
+    url('Early-GameBoy.ttf')
+        format('truetype');
+
+}
+
+body{
+
+background: #007b7b;
+    /*background-image: url("https://www.thurrott.com/wp-content/uploads/2015/06/clouds.jpg");*/
+    /*background-size: 100%;*/
+
+}
+
+.rainbow {
+
+   text-shadow:5px 5px white;
+
+      background-image: -webkit-linear-gradient(to right, #FF0080, #FF8C00, #40E0D0);
+
+background-image: linear-gradient(to right, #FF0080, #FF8C00, #40E0D0);
+color:transparent;
+
+
+-webkit-background-clip: text;
+
+background-clip: text;
+
+
+}
+
+.gold{
+        text-shadow: 2px 2px white;
+    font-weight:bold;
+background: #F7971E;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #FFD200, #F7971E);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #FFD200, #F7971E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+}
+.silver{
+background: #ADA996;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.bronze{
+
+    background: #B79891;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #94716B, #B79891);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #94716B, #B79891); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.gameThumb{
+    width: 150px;
+    height:150px;
+    display:block;
+    margin:10px;
+}
+
+.bigTitle{
+    text-align:center;
+    font-size:6em;
+
+}
+
+.game{
+    display:inline-block;
+    background:#cbcbcb;
+    margin-left:20px;
+    margin-right:auto;
+    margin-bottom:10px;
+    width:48%;
+
+    box-shadow:4px 4px black;
+}
+.game.upcoming{
+    background:#827d84;
+
+}
+a{
+    color:white;
+}
+
+h1{
+    font-family: 'MarioKart';
+    text-transform: lowercase;
+    border:1px lightgrey;
+    text-shadow: 1px 1px black;
+}
+
+h1.gameTitle{
+    border:1px solid white;
+    text-shadow: 3px 3px black;
+    padding-left:5px;
+    font-weight:bold;
+
+    background: #00007b;
+
+}
+
+i {
+    font-size:.6em;
+    color:lightgrey;
+}
+
+ol{
+    font-family: GameBoy;
+
+}
+.place
+{
+    font-size:1.2em;
+    padding-left:10px;
+    padding-right:10px;
+    min-width:300px;
+    border-bottom:1px solid grey;
+     border-right:1px solid grey;
+    border-left:1px solid grey;
+    border-top:1px solid white;
+}

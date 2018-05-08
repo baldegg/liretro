@@ -1,0 +1,41 @@
+{% extends 'scoreboard/base.html' %}
+{% block body %}
+
+
+
+    <h1 class="bigTitle rainbow bounceIn infinite">Achievement Station</h1>
+        {% for achGame in achGames %}
+            <div class="game {% if not achGame.topN %} upcoming {% endif%} ">
+                <h1 class="gameTitle "><a
+                        href="/achievementstation/event/{{ achGame.game_id }}"> {{ achGame.title }}    </a><i>{{  achGame.time}}</i></h1>
+                <div class="row">
+
+                    <div class="col-sm-3"><img class="gamethumb float-left" src="{{ achGame.image }}" \></div>
+
+
+                    <ol>
+
+
+                        {% for score in achGame.topN %}
+                            <li class=" place
+                                    {% if forloop.counter0 == 0 %} gold
+                                    {% elif forloop.counter0 == 1 %} silver
+                                    {% elif forloop.counter0 == 2 %} bronze
+                                    {% endif %}
+                            ">
+
+
+                                {% if score.score %}{{ score.score }} {% else %}
+                                    {{ score.time }}{% endif %} - {{ score.player.player_name }}</li>
+                        {% endfor %}
+
+
+                    </ol>
+                </div>
+            </div>
+
+        {% endfor %}
+
+{% endblock %}
+
+{#       {% if forloop.counter0|divisibleby:2   %}Hi{% endif %}#}
