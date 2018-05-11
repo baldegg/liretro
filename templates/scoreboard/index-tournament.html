@@ -6,8 +6,7 @@
    <center><img class="ttitle" src="{% static 'x-Tournament Results.png' %}"></center><br>
         {% for tourGame in tourGames %}
             <div class="TourneyGame">
-                <h1 class="TourneyTitle {% if not tourGame.first %} upcomingTourney {% endif %}"><img class="tourneyThumb float-left" src="{{ tourGame.image }}" \><a
-                        href="/achievementstation/event/{{ tourGame.game_id }}"> {{ tourGame.title }}    </a></h1>
+                <h1 class="TourneyTitle {% if not tourGame.first %} upcomingTourney {% endif %}"><img class="tourneyThumb float-left" src="{{ tourGame.image }}" \>{{ tourGame.title }} </h1>
 
                 <ol class="tourneyPlaces"><b class="time">{{ tourGame.time }}</b>
                {% if tourGame.first %}<li class="gold">{{tourGame.first }}</li>{% endif %}

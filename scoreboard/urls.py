@@ -4,8 +4,7 @@ from . import views
 
 app_name = 'scoreboard'
 urlpatterns = [
-    # path('', views.index, name='index'),
+    path('', views.mainpage, name='index'),
     url(r'^achievementstation/day/(?P<day>\d+)/$', views.achievementcenter, name='achievementstation'),
-    url(r'^achievementstation/event/(?P<pk>\d+)/$', views.achievement_detail, name='post_detail'),
     url(r'^tournament/day/(?P<day>\d+)/$', views.tournament, name='tournament'),
 ]

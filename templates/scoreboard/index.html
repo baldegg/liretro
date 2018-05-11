@@ -6,8 +6,7 @@
     <h1 class="bigTitle rainbow bounceIn infinite">Achievement Station</h1>
         {% for achGame in achGames %}
             <div class="game {% if not achGame.topN %} upcoming {% endif%} ">
-                <h1 class="gameTitle "><a
-                        href="/achievementstation/event/{{ achGame.game_id }}"> {{ achGame.title }}    </a><i>{{  achGame.time}}</i></h1>
+                <h1 class="gameTitle "> {{ achGame.title }}   <i>{{  achGame.time}}</i></h1>
                 <div class="row">
 
                     <div class="col-sm-3"><img class="gamethumb float-left" src="{{ achGame.image }}" \></div>

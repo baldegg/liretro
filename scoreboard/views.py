@@ -67,3 +67,7 @@ def achievement_detail(request, pk):
     game = get_object_or_404(Achievement, pk=pk)
     context = {'game': game}
     return render(request, 'scoreboard/gameboard.html', context)
+
+
+def mainpage(request):
+    return render(request, 'scoreboard/links.html')
