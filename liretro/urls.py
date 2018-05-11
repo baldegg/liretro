@@ -20,7 +20,7 @@ from django.conf.urls import include, url
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('achievementstation/', include('scoreboard.urls')),
+    path('', include('scoreboard.urls')),
 ]
 if settings.DEBUG:
     import debug_toolbar

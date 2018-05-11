@@ -23,9 +23,9 @@ class Tournament(models.Model):
     game_name = models.CharField(max_length=200, unique=True)
     event_time = models.DateTimeField("Scheduled Date/Time", blank=True)
     image = models.ImageField(upload_to='scoreboard/static/scoreboard/images/tourgames')
-    first = models.ForeignKey(Player, on_delete=models.CASCADE, related_name='first+', verbose_name="First Place Player/Team")
-    second = models.ForeignKey(Player, on_delete=models.CASCADE,related_name='second+', verbose_name="Second Place Player/Team")
-    third = models.ForeignKey(Player, on_delete=models.CASCADE, related_name='third+', verbose_name="Third Place Player/Team")
+    first = models.ForeignKey(Player, on_delete=models.CASCADE, related_name='first+', verbose_name="First Place Player/Team", blank = True, null=True)
+    second = models.ForeignKey(Player, on_delete=models.CASCADE,related_name='second+', verbose_name="Second Place Player/Team", blank = True, null=True)
+    third = models.ForeignKey(Player, on_delete=models.CASCADE, related_name='third+', verbose_name="Third Place Player/Team", blank = True, null=True)
 
     def __str__(self):
         return self.game_name

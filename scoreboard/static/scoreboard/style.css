@@ -78,6 +78,14 @@ background: linear-gradient(to left, #94716B, #B79891); /* W3C, IE 10+/ Edge, Fi
     margin:10px;
 }
 
+.tourneyThumb{
+    width: 100px;
+    height:100px;
+    display:block;
+    margin:10px;
+    border:1px solid white;
+    box-shadow:2px 2px black;
+}
 .bigTitle{
     text-align:center;
     font-size:6em;
@@ -91,13 +99,31 @@ background: linear-gradient(to left, #94716B, #B79891); /* W3C, IE 10+/ Edge, Fi
     margin-right:auto;
     margin-bottom:10px;
     width:48%;
-
     box-shadow:4px 4px black;
 }
-.game.upcoming{
-    background:#827d84;
+
+.TourneyGame{
+
+        margin-left:10px;
+    margin-right:auto;
+    margin-bottom:10px;
+    width:32%;
+  display:inline-block;
+    box-shadow:4px 4px black;
+    background: rgba(255,255,255,.7);
+}
+
+.TourneyGame:nth-child(odd) {
+    background: rgba(255,255,255,.8);
 
 }
+
+.game.upcoming{
+    background:#827d84;
+}
+/*.TourneyGame.upcoming{*/
+    /*background:#827d84;*/
+/*}*/
 a{
     color:white;
 }
@@ -138,4 +164,47 @@ ol{
      border-right:1px solid grey;
     border-left:1px solid grey;
     border-top:1px solid white;
+}
+
+.tournament{
+    background-image: url('kof.gif');
+    background-size: 100%;
+    height:100%;
+    width:100%;
+}
+
+
+.TourneyTitle{
+background: #e65c00;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #F9D423, #e65c00);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #F9D423, #e65c00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+    border:3px solid white;
+    text-shadow: 3px 3px black;
+    padding-left:5px;
+    min-height:102px;
+
+}
+
+.TourneyTitle.upcomingTourney{
+background: #333333;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #dd1818, #333333);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #dd1818, #333333); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
+}
+.ttitle{
+    margin-top:10px;
+}
+
+.tourneyPlaces{
+    margin-left:50px;
+}
+
+b{
+    color:red;
+    text-shadow:2px 2px black;
+    border-bottom:2px solid black;
 }
