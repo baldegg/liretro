@@ -5,13 +5,13 @@ from django.http import HttpResponse
 from django.shortcuts import render, get_object_or_404
 
 
-def achievementcenter(request, pk):
+def achievementcenter(request, day):
     n = 5
-    if pk == '0':
+    if day == '0':
         games = Achievement.objects.all()
-    elif pk == '1':
+    elif day == '1':
         games = Achievement.objects.filter(event_time__day=11)
-    elif pk == '2':
+    elif day == '2':
         games = Achievement.objects.filter(event_time__day=12)
     achGames = []
     for game in games:
